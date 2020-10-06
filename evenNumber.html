@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="C:\Users\fm19286\Desktop\displayDateTime.js"> -->
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+  <style>
+    p {
+      color: black;
+    }
+  </style>
+  <script>
+    even = [];
+    odd = [];
+
+    for (i = 0; i <= 10; i++) {
+      if (i % 2 == 0) {
+        even.push([i]);
+        // document.getElementById("even").innerHTML = "Even numbers from 0 to 100 are " + even;
+        console.log("even Numbers" + [i])
+      }
+      else {
+        odd.push([i]);
+        // console.log([i] + " is odd number."); 
+        // document.getElementById("odd").innerHTML = "Odd numbers from 0 to 100 are " + odd;
+        console.log("odd Numbers" + [i])
+
+      }
+
+    }
+
+    var data = [
+      {
+        Id: 101,
+        Name: "ferose",
+        Role: "Softwear",
+        isactive: true
+      },
+      {
+        Id: 102,
+        Name: "Nagaraj",
+        Role: "Softwear",
+        isactive: false
+      },
+      {
+        Id: 103,
+        Name: "Nageswar",
+        Role: "Softwear",
+        isactive: true
+      }
+    ]
+
+    data.push()
+
+    // console.log(a)
+
+    // for (let a of b){
+    //   console.log(a);
+    // }
+
+    // let b=[];
+    // for(let a of b){
+    //   if(a.isactive){
+    //     b.push(a);
+    //   }
+    // }
+
+    console.log(data)
+
+    let another = data.filter(some => { if (some.isactive == true) { return some } });
+
+    console.log(another)
+
+
+
+    function test() {
+      for (i = 0; i < 10; i++) {
+        console.log(i)
+      }
+    }
+    test();
+// console.log(a)
+
+// console.log(b);
+
+
+const example = (marks,subjects) =>  Object.keys(subjects).every(key => marks.hasOwnProperty(key) && marks[key] === subjects[key]);
+console.log(example({ age: 25, hair: 'long', beard: true }, { hair: 'long', beard: true })); 
+  </script>
+
+<body>
+  <h1>Display odd and even numbers from 0 to 100.</h1>
+
+  <p id="even"></p>
+
+  <p id="odd"></p>
+  <button onclick="displayDateTime()">Print this page</button>
+</body>
+<script src="displayDateTime.js"></script>
+
+</html>
