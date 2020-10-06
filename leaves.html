@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+.bt {
+    margin-top: 50px;
+}
+.tb {
+    margin-left: 10px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+ <center> <button type="button" class="btn btn-outline-primary bt" onclick="totalleaves()">Total Leaves</button></center>
+ <center><input type="number" id="num1" placeholder="please enter  leaves" ><button type="button" class="btn btn-outline-success tb" onclick="addleaves()">Add Leaves</button></center>
+  <h1 id="num2"></h1>
+</div>
+
+</body>
+<script>
+    var leaves = 20;
+    function totalleaves() {
+alert("Total Leaves  "+ leaves);
+    } 
+
+    function addleaves() {
+var y = document.getElementById("num1").value;
+if(y>20) {
+  
+    alert("Do not have leave balance");
+    
+}
+else if(y>0) {
+    leaves = leaves-y;
+    if(Math.sign(leaves) === -1){
+        alert("Do not have leave balance");
+    }
+    else{
+    alert(`Your Leave balance is ${leaves}`);
+    document.getElementById("num1").value = null;
+    document.getElementById("num2").innerHTML = "Your leave Balance is" + "<h1>"+leaves+"</h1>"
+    }
+}
+else if(y>-0) {
+    alert("Do not have leave balance");
+}
+else {
+    alert ("please enter valid leaves");
+}
+    }
+</script>
+</html>
